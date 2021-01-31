@@ -37,6 +37,6 @@ services:
   
   composer:
     image: composer
-    volumes:
-        - ./:/srv/www/phpunit
+    volumes: 
+      - ./:/app
     command: install
