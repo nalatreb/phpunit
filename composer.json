@@ -10,5 +10,12 @@
             "email": "bertalan.verebelyi@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "7.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
 }
