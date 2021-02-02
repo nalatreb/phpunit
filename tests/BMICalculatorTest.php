@@ -58,5 +58,6 @@ class BMICalculatorTest extends TestCase
         $this->bmiCalculator->height = 1.6;
         $result = $this->bmiCalculator->calculate();
         $this->assertEquals($expected, $result);
+        $this->assertEquals(BASEURL, 'http://localhost:8000');
     }
 }

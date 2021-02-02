@@ -21,6 +21,10 @@
         </testsuite>
     </testsuites>
 
+    <php>
+        <const name="BASEURL" value="http://localhost:8000" />
+    </php>
+
     <coverage cacheDirectory=".phpunit.cache/code-coverage"
               processUncoveredFiles="true">
         <include>
