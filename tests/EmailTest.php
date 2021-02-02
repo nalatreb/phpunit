@@ -8,12 +8,12 @@ class EmailTest extends TestCase
      * @dataProvider emailsProvider
      * @param string $email
      */
-    public function testValidEmail(string $email)
+    public function testValidEmail(string $email): void
     {
         $this->assertMatchesRegularExpression('/^.+\@\S+\.\S+$/', $email);
     }
 
-    public function emailsProvider()
+    public function emailsProvider(): array
     {
         return [
             ['fefef@fef.com'],
@@ -28,7 +28,7 @@ class EmailTest extends TestCase
      * @param $b
      * @param $expected
      */
-    public function testMath($a, $b, $expected)
+    public function testMath($a, $b, $expected): void
     {
         $result = $a * $b;
         $this->assertEquals($expected, $result);

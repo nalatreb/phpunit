@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class UsefulAssertionsTest extends TestCase
 {
-    public function testAssertSame()
+    public function testAssertSame(): void
     {
         $expected = 'baz';
         $result = 'baz';
@@ -12,7 +12,7 @@ class UsefulAssertionsTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
-    public function testAssertEquals()
+    public function testAssertEquals(): void
     {
         $expected = 1;
         $result = 1;
@@ -20,17 +20,17 @@ class UsefulAssertionsTest extends TestCase
         $this->assertEquals($expected, $result);
     }
 
-    public function testAssertEmpty()
+    public function testAssertEmpty(): void
     {
         $this->assertEmpty([]);
     }
 
-    public function testAssertNull()
+    public function testAssertNull(): void
     {
         $this->assertNull(null);
     }
 
-    public function testAssertGreaterThan()
+    public function testAssertGreaterThan(): void
     {
         $expected = 2;
         $result = 3;
@@ -38,27 +38,27 @@ class UsefulAssertionsTest extends TestCase
         $this->assertGreaterThan($expected, $result);
     }
 
-    public function testAssertFalse()
+    public function testAssertFalse(): void
     {
         $this->assertFalse(false);
     }
 
-    public function testAssertTrue()
+    public function testAssertTrue(): void
     {
         $this->assertTrue(true);
     }
 
-    public function testAssertCount()
+    public function testAssertCount(): void
     {
         $this->assertCount(3, [1, 2, 3]);
     }
 
-    public function testAssertContains()
+    public function testAssertContains(): void
     {
         $this->assertContains(4, [1, 2, 3, 4]);
     }
 
-    public function testAssertStringContainsString()
+    public function testAssertStringContainsString(): void
     {
         $searchFor = 'foo';
         $searchIn = 'foo';
@@ -66,22 +66,22 @@ class UsefulAssertionsTest extends TestCase
         $this->assertStringContainsString($searchFor, $searchIn);
     }
 
-    public function testAssertInstanceOf()
+    public function testAssertInstanceOf(): void
     {
         $this->assertInstanceOf(RuntimeException::class, new RuntimeException());
     }
 
-    public function testAssertArrayHayKey()
+    public function testAssertArrayHayKey(): void
     {
         $this->assertArrayHasKey('baz', ['baz' => 'bar']);
     }
 
-    public function testAssertDirectoryIsWritable()
+    public function testAssertDirectoryIsWritable(): void
     {
         $this->assertDirectoryIsWritable('./');
     }
 
-    public function testAssertFileIsWritable()
+    public function testAssertFileIsWritable(): void
     {
         $this->assertFileIsWritable('./.env');
     }

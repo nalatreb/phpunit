@@ -3,12 +3,12 @@
 
 class UsefulAnnotationsTest extends \PHPUnit\Framework\TestCase
 {
-    private $value = 0;
+    private int $value = 0;
 
     /**
      * @before
      */
-    public function runBeforeEachTestMethod()
+    public function runBeforeEachTestMethod(): void
     {
         $this->value = 1;
     }
@@ -16,12 +16,12 @@ class UsefulAnnotationsTest extends \PHPUnit\Framework\TestCase
     /**
      * @after
      */
-    public function runAfterEachTestMethod()
+    public function runAfterEachTestMethod(): void
     {
         $this->value = 0;
     }
 
-    public function testAnnotations1()
+    public function testAnnotations1(): void
     {
         $this->value++;
         $expected = 2;
@@ -29,7 +29,7 @@ class UsefulAnnotationsTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expected, $result);
     }
 
-    public function testAnnotations2()
+    public function testAnnotations2(): void
     {
         $this->value++;
         $expected = 2;
