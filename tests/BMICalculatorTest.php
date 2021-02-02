@@ -21,11 +21,8 @@ class BMICalculatorTest extends TestCase
     public function testShowUnderweightWhenBmiLessThan18(): void
     {
         $this->bmiCalculator->bmi = 10;
-
         $result = $this->bmiCalculator->getTextResultFromBmi();
-
         $expected = 'Underweight';
-
         $this->assertEquals($expected, $result);
     }
 
@@ -35,11 +32,8 @@ class BMICalculatorTest extends TestCase
     public function testShowNormalWhenBmiBetween1825(): void
     {
         $this->bmiCalculator->bmi = 24;
-
         $result = $this->bmiCalculator->getTextResultFromBmi();
-
         $expected = 'Normal';
-
         $this->assertEquals($expected, $result);
     }
 
@@ -49,11 +43,8 @@ class BMICalculatorTest extends TestCase
     public function testShowOverweightWhenBmiMoreThan25(): void
     {
         $this->bmiCalculator->bmi = 38;
-
         $result = $this->bmiCalculator->getTextResultFromBmi();
-
         $expected = 'Overweight';
-
         $this->assertEquals($expected, $result);
     }
 
