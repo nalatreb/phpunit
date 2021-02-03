@@ -19,6 +19,9 @@
         <testsuite name="bmi">
             <directory>tests/BMICalculatorTest.php</directory>
         </testsuite>
+        <testsuite name="fixtures">
+            <directory>tests/Fixtures</directory>
+        </testsuite>
     </testsuites>
 
     <php>
