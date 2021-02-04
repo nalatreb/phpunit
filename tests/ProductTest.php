@@ -1,7 +1,7 @@
 <?php
 
 use App\Product;
-use App\Session;
+use App\SessionInterface;
 use PHPUnit\Framework\TestCase;
 
 class ProductTest extends TestCase
@@ -9,7 +9,7 @@ class ProductTest extends TestCase
     public function testProduct(): void
     {
 //        $product = new Product(new Session());
-        $session = new class implements \App\SessionInterface {
+        $session = new class implements SessionInterface {
             public function open() {}
             public function close() {}
             public function write($product)
@@ -18,7 +18,9 @@ class ProductTest extends TestCase
             }
         };
         $product = new Product($session);
-
+        $product->setLoggerCallable(function () {
+            echo 'real logger was not called!';
+        });
         $this->assertSame('product 1', $product->fetchProductById(1));
     }
 }
