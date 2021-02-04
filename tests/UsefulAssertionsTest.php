@@ -83,6 +83,6 @@ class UsefulAssertionsTest extends TestCase
 
     public function testAssertFileIsWritable(): void
     {
-        $this->assertFileIsWritable('.env');
+        $this->assertFileIsWritable('.gitignore');
     }
 }
