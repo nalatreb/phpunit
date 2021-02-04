@@ -23,4 +23,15 @@ class ProductTest extends TestCase
         });
         $this->assertSame('product 1', $product->fetchProductById(1));
     }
+
+    public function testAnother()
+    {
+        $this->markTestIncomplete('This test has not been implemented yet.');
+
+        if (!extension_loaded('xdebug')) {
+            $this->markTestSkipped('The Xdebug extension is not available.');
+        }
+
+        $this->assertTrue(true);
+    }
 }
