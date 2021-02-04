@@ -20,4 +20,9 @@ class User
         $this->db->getEmailAndLastName();
         return "{$this->name} {$this->lastName}";
     }
+
+    protected function hashPassword(): string
+    {
+        return 'password hashed!';
+    }
 }
