@@ -2,7 +2,7 @@
 
 namespace App;
 
-class Product
+class Product extends ProductAbstract
 {
     private SessionInterface $session;
 
