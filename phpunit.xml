@@ -5,10 +5,8 @@
          cacheResultFile=".phpunit.cache/test-results"
          executionOrder="depends,defects"
          beStrictAboutCoversAnnotation="true"
-         beStrictAboutOutputDuringTests="true"
+         beStrictAboutOutputDuringTests="false"
          beStrictAboutTodoAnnotatedTests="true"
-         failOnRisky="true"
-         failOnWarning="true"
          colors="true"
          testdox="false"
          verbose="true">
