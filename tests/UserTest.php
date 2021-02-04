@@ -3,9 +3,12 @@
 use App\Database;
 use App\User;
 use PHPUnit\Framework\TestCase;
+use Traits\CustomAssertionTrait;
 
 class UserTest extends TestCase
 {
+    use CustomAssertionTrait;
+
     public function testValidUserName(): void
     {
         $user = new User('donald', 'Trump');
@@ -36,7 +39,7 @@ class UserTest extends TestCase
         $mockedDb = new class extends Database {
             public function getEmailAndLastName(): void
             {
-//                echo 'no real db touched!';
+                echo 'no real db touched!';
             }
         };
         $setUserClosure = function () use ($mockedDb) {
@@ -70,5 +73,15 @@ class UserTest extends TestCase
             }
         };
         $this->assertSame('password hashed!', $user->getHashedPassword());
+    }
+
+    public function testCustomDataStructure(): void
+    {
+        $data = [
+            'nick' => 'Dolar',
+            'email' => 'donald@trump.com',
+            'age' => 70
+        ];
+        $this->assertArrayData($data);
     }
 }
