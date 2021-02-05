@@ -4,6 +4,7 @@ use PHPUnit\Framework\TestCase;
 use App\BMICalculator;
 
 /**
+ * @uses \App\BMICalculator
  * @coversDefaultClass \App\BMICalculator
  */
 class BMICalculatorTest extends TestCase
@@ -27,7 +28,7 @@ class BMICalculatorTest extends TestCase
     }
 
     /**
-     * @covers ::getTextResultFromBmi
+     * @covers \App\BMICalculator::getTextResultFromBmi
      */
     public function testShowNormalWhenBmiBetween1825(): void
     {
@@ -38,7 +39,7 @@ class BMICalculatorTest extends TestCase
     }
 
     /**
-     * @covers ::getTextResultFromBmi
+     * @covers \App\BMICalculator::getTextResultFromBmi
      */
     public function testShowOverweightWhenBmiMoreThan25(): void
     {
@@ -49,7 +50,7 @@ class BMICalculatorTest extends TestCase
     }
 
     /**
-     * @covers ::calculate
+     * @covers \App\BMICalculator::calculate
      */
     public function testCanCalculateCorrectBmi()
     {

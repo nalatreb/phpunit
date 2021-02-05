@@ -26,7 +26,7 @@ class ProductTest extends TestCase
 
     public function testAnother()
     {
-        $this->markTestIncomplete('This test has not been implemented yet.');
+//        $this->markTestIncomplete('This test has not been implemented yet.');
 
         if (!extension_loaded('xdebug')) {
             $this->markTestSkipped('The Xdebug extension is not available.');

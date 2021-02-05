@@ -12,6 +12,7 @@ services:
     environment:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      XDEBUG_MODE: develop,coverage,profile,gcstats
 
   nginx:
     image: nginx:1.19.6
