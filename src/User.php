@@ -25,4 +25,20 @@ class User
     {
         return 'password hashed!';
     }
+
+    public function someOperation(array $array): string
+    {
+        $count = count($array);
+        if ($count === 0) {
+            return 'error';
+        }
+
+        if ($count === 1) {
+            if ($array[0] === 0) {
+                return 'error';
+            }
+            return 'ok!';
+        }
+        return 'ok!';
+    }
 }
